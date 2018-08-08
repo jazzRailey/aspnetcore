@@ -14,5 +14,8 @@ namespace OdeToFood.Controllers
         {
             return "Valenzuela City";
         }
+        public string Test() {
+            return "Test";
+        }
     }
 }
