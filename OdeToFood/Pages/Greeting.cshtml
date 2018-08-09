@@ -1,0 +1,20 @@
+﻿@page
+
+@model GreetingModel
+
+@* There's two way to add service into your razor page
+    1. use the inject keyword
+    2. use the model
+    //To make your code cleaner use the _ViewImports and put all the necessary using statements
+
+    Again recap....
+    1. Create a Pages folder 
+    2. Add Asp.net razor page
+    3. there's a code behind (just like the webforms) - DI the necessary serviced use the constructor for your DI
+    4. Don't forget @page should always comes first
+    5. use @model GreetingModel (name of your codebehind) to access the variables that you have created
+*@
+
+
+<div> You're now using the razor page</div><br/>
+<div>@Model.CurrentGreeting</div>
