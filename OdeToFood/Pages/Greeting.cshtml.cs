@@ -15,9 +15,9 @@ namespace OdeToFood.Pages
         {
             _greeting = greeting;
         }
-        public void OnGet()
+        public void OnGet(string name, string lastname)
         {
-            this.CurrentGreeting = _greeting.GetMessageOfTheDay();
+            CurrentGreeting = _greeting.GetMessageOfTheDay() + " First param is : " + name + " Second param is : " + lastname;
         }
     }
 }

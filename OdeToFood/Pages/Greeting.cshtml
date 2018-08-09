@@ -1,4 +1,4 @@
-﻿@page
+﻿@page "{name}/{lastname}"
 
 @model GreetingModel
 
@@ -13,6 +13,8 @@
     3. there's a code behind (just like the webforms) - DI the necessary serviced use the constructor for your DI
     4. Don't forget @page should always comes first
     5. use @model GreetingModel (name of your codebehind) to access the variables that you have created
+    6. To add params just simply add "{param_name}""
+
 *@
 
 
