@@ -10,6 +10,11 @@ namespace OdeToFood.Services
     {
         List<Restaurant> _retaurants;
 
+        public Restaurant Add(Restaurant restaurant)
+        {
+            throw new NotImplementedException();
+        }
+
         public Restaurant Get(int Id)
         {
             return GetAllRestaurants().FirstOrDefault(r => r.Id == Id);
@@ -26,5 +31,7 @@ namespace OdeToFood.Services
 
             return _retaurants;
         }
+
+        
     }
 }

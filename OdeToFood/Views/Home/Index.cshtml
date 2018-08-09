@@ -1,9 +1,10 @@
 ﻿@model OdeToFood.ViewModels.HomeIndexViewModel
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-    <title></title>
-</head>
-<body>
+
+@{ 
+    ViewBag.Title = "Home page";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+}
     <h1>@Model.CurrentMessage</h1>
     <table>
         @foreach (var resturant in Model.Restaurants)
@@ -20,5 +21,8 @@
         }
 
     </table>
-</body>
-</html>
+<div>
+    @section footer{ 
+        <div> Section Footer is set to true or required...</div>
+    }
+</div>

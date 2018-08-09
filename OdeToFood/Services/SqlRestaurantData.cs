@@ -28,9 +28,9 @@ namespace OdeToFood.Services
             return _context.Restaurants.FirstOrDefault(r => r.Id == Id);
         }
 
-        public IEnumerable<Restaurant> GetAllRestaurants()
+        public List<Restaurant> GetAllRestaurants()
         {
-            return _context.Restaurants.OrderBy(r => r.Name);
+            return _context.Restaurants.OrderBy(r => r.Name).ToList();
         }
 
         
