@@ -1,0 +1,25 @@
+﻿@model OdeToFood.ViewModels.HomeIndexViewModel
+
+@{ 
+    ViewBag.Title = "Using Partial View";
+
+
+}
+    <h1>All Restaurants</h1>
+    <table>
+        @foreach (var resturant in Model.Restaurants)
+        {
+           
+            <!--To use partial view 
+                Simply create a razor view, prepend it with _ underscore
+                then use the Html.Partial(partialname, model) add model if your razor page requires a model
+                -->
+            @Html.Partial("_Summary", resturant);
+        }
+
+    </table>
+<div>
+    @section footer{ 
+        <div> Section Footer is set to true or required...</div>
+    }
+</div>

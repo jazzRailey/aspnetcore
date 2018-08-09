@@ -23,6 +23,13 @@ namespace OdeToFood.Controllers
             return View(model);
         }
 
+        public IActionResult IndexUsingPartialView() {
+            var model = new HomeIndexViewModel();
+            model.Restaurants = _restaurant.GetAllRestaurants();
+            model.CurrentMessage = _greeter.GetMessageOfTheDay();
+            return View(model);
+        }
+
         public IActionResult Details(int id) {
 
             var model = _restaurant.Get(id);
